@@ -41,7 +41,9 @@ public class LoginBean {
     // tag::doLogin[]
     public String doLogin() throws Exception {
         HttpServletRequest request = SessionUtils.getRequest();
-
+        
+        System.out.println("Just for commit...");
+        
         try {
             request.logout();
             request.login(this.username, this.password);
